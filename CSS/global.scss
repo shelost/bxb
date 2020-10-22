@@ -79,9 +79,9 @@ h3{
                 transform: translateX(0);
             }
             h1{
-                font-size: 24px;
+                font-size: 22px;
                 margin-right: 1.5vw;
-                font-weight: 700;
+                font-weight: 600;
                 transition: 0.2s ease;
                 &.selected{
                     color: $gold;
@@ -572,7 +572,7 @@ h3{
 
         &.services{
             .circle{
-                background-image: url('../Assets/city-unsplash.png'), linear-gradient(45deg, rgba(green, 0.9), rgba($gold, 0.7));
+                background-image: url('../Assets/city-unsplash.png'), linear-gradient(45deg, rgba($pink, 0.7), rgba($gold, 0.9));
             }
         }
 
@@ -647,9 +647,9 @@ h3{
         transform: translateX(50vw);
         transition: 0.3s ease;
         h1{
-            font-size: 24px;
+            font-size: 22px;
             margin-right: 30px;
-            font-weight: 700;
+            font-weight: 600;
             transition: 0.2s ease;
             &.selected{
                 color: $gold;
