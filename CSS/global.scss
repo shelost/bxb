@@ -3,6 +3,7 @@ $gold2: #ffb515;
 $blue: #0076ff;
 $red: #ff0000;
 $purple: #d400ff;
+$pink: #ff7ae2;
 
 ::-webkit-scrollbar{
     width: 0px;
@@ -40,7 +41,7 @@ h3{
         }
 
         &.services{
-            background-image: url('../Assets/city-unsplash.png'), linear-gradient(45deg, rgba(green, 0.9), rgba($gold, 0.7));
+            background-image: url('../Assets/city-unsplash.png'), linear-gradient(45deg, rgba($pink, 0.7), rgba($gold, 0.9));
         }
 
         &.contact{
@@ -130,12 +131,6 @@ h3{
         align-items: center;
     }
 
-    .elems{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
     .column{
         display: flex;
         flex-direction: column;
@@ -154,7 +149,6 @@ h3{
         border-radius: 30px;
         color: white;
         text-align: left;
-        animation: fade 2s ease;
 
         h1{
             width: 90%;
@@ -190,8 +184,8 @@ h3{
 
         &.full{
             width: 80vw;
-            margin: 100px;
-            margin-bottom: 100px;
+            margin: 50px;
+            margin-bottom: 70px;
             max-width: 1600px;
         }
     }
@@ -234,14 +228,21 @@ h3{
         margin-left: 30px;
     }
 
+    .elems{
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
     .elem{
         display: flex;
         position: relative;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         width: 35vw;
-        height: fit-content;
         max-width: 730px;
         padding: 30px;
         padding-bottom: 45px;
@@ -250,7 +251,6 @@ h3{
         border-radius: 30px;
         color: white;
         text-align: left;
-        animation: fade 2s ease;
 
         .expo{
             h1{
@@ -288,19 +288,7 @@ h3{
                 img{
                     width: 60%;
                     margin-left: 20%;
-                    filter: invert(1) drop-shadow(0 0 5px $blue);
-                    &.blue{
-                        filter: invert(1) drop-shadow(0 0 5px $blue);
-                    }
-                    &.red{
-                        filter: invert(1) drop-shadow(0 0 7px $red);
-                    }
-                    &.gold{
-                        filter: invert(1) drop-shadow(0 0 5px $gold);
-                    }
-                    &.purple{
-                        filter: invert(1) drop-shadow(0 0 5px $purple);
-                    }
+                    filter: invert(1);
                     &.norm{
                         filter: invert(0);
                     }
@@ -313,7 +301,7 @@ h3{
 
         &.full{
             width: 80vw;
-            margin: 100px;
+            margin: 30px;
             margin-bottom: 30px;
             max-width: 1600px;
             .carousel{
@@ -328,15 +316,91 @@ h3{
         }
     }
 
+    .featured{
+        border: 2px solid $gold;
+
+        .sec{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .expo{
+                width: 100%;
+            }
+            img{
+                height: 150px;
+                margin-right: 20px;
+                background-color: black;
+                border-radius: 50vw;
+            }
+            h2{
+                font-size: 20px;
+                font-weight: 600;
+                margin-left: 1vw;
+                font-style: italic;
+                color: $gold;
+            }
+            h1{
+                padding: 0;
+                margin-top: 1vw;
+                margin-left: 1vw;
+            }
+            p{
+                width: 90%;
+            }
+        }
+        .rows{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 10px;
+            .row{
+                height: 40px;
+                white-space: nowrap;
+                margin: 10px;
+                background-color: rgba(white, 0.1);
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 15px;
+                img{
+                    height: 100%;
+                    margin-right: 15px;
+                    filter: invert(1);
+                    &.norm{
+                        filter: invert(0);
+                    }
+                    &.con{
+                        filter: contrast(10) grayscale(1) invert(1);
+                    }
+                }
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .cards{
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
     .card{
         display: flex;
-        position: relative;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        width: 50vw;
-        height: fit-content;
+        justify-content: flex-start;
+        width: 25vw;
         max-width: 730px;
+        flex: 1;
         padding: 30px;
         padding-bottom: 45px;
         margin-right: 30px;
@@ -347,12 +411,9 @@ h3{
         border-radius: 30px;
         color: black;
         text-align: left;
-        display: inline-block;
-        animation: fade 2s ease;
-        flex: 0 0 auto;
         .profile{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
             margin: 0;
             background-color: rgba(black, 0.05);
@@ -363,9 +424,9 @@ h3{
                 background-color: rgba(white, 1);
                 width: 40px;
                 height: 40px;
-                height: 100%;
-                border-radius: 50px;
+                border-radius: 20px;
                 padding: 10px;
+                align-self: center;
             }
             div{
                 margin-left: 20px;
@@ -389,26 +450,12 @@ h3{
         .review{
             margin: 0;
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
+            .italic{
+                font-style: italic;
+            }
         }
-    }
-
-    .cards{
-        display: flex;
-        align-items: flex-start;
-        width: 100vw;
-        overflow-x: scroll;
-        flex-wrap: nowrap;
-        margin-bottom: 20px;
-        margin-top: 40px;
-    }
-
-    .placeholder{
-        width: 100px;
-        height: 100px;
-        background-color: rgba(red, 0);
-        display: inline-block;
     }
 
     .text{
@@ -644,6 +691,7 @@ h3{
         justify-content: center;
     }
 
+
     .box{
         display: flex;
         flex-direction: column;
@@ -655,7 +703,6 @@ h3{
         color: white;
         margin-top: 30px;
         text-align: left;
-        animation: fade 2s ease;
 
         h1{
             width: 85%;
@@ -748,7 +795,6 @@ h3{
         background-color: rgba(black, 0.85);
         color: white;
         text-align: left;
-        animation: fade 2s ease;
 
         .expo{
             h1{
@@ -783,19 +829,7 @@ h3{
                 width: 25%;
                 img{
                     width: 100%;
-                    filter: invert(1) drop-shadow(0 0 5px $blue);
-                    &.blue{
-                        filter: invert(1) drop-shadow(0 0 5px $blue);
-                    }
-                    &.red{
-                        filter: invert(1) drop-shadow(0 0 7px $red);
-                    }
-                    &.gold{
-                        filter: invert(1) drop-shadow(0 0 5px $gold);
-                    }
-                    &.purple{
-                        filter: invert(1) drop-shadow(0 0 5px $purple);
-                    }
+                    filter: invert(1);
                     &.norm{
                         filter: invert(0);
                     }
@@ -807,6 +841,67 @@ h3{
             }
         }
 
+    }
+
+    .featured{
+        width: 95vw;
+        .sec{
+            margin-left: 5vw;
+            .expo{
+                width: 100%;
+            }
+            img{
+                display: none;
+            }
+            h2{
+                font-size: 20px;
+                font-weight: 600;
+                margin-left: 1vw;
+                font-style: italic;
+                color: $gold;
+            }
+            h1{
+                padding: 0;
+                margin-top: 1vw;
+                margin-left: 1vw;
+            }
+            p{
+                width: 90%;
+            }
+        }
+        .rows{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            .row{
+                height: 40px;
+                white-space: nowrap;
+                margin: 10px;
+                background-color: rgba(white, 0.1);
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 15px;
+                img{
+                    height: 100%;
+                    margin-right: 15px;
+                    filter: invert(1);
+                    &.norm{
+                        filter: invert(0);
+                    }
+                    &.con{
+                        filter: contrast(10) grayscale(1) invert(1);
+                    }
+                }
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+        }
     }
 
     .card{
