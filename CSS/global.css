@@ -478,10 +478,7 @@ h3 {
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: 25vw;
-    max-width: 730px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    max-width: 1000px;
     padding: 30px;
     padding-bottom: 45px;
     margin-right: 30px;
@@ -489,6 +486,7 @@ h3 {
     border-radius: 30px;
     color: black;
     text-align: left;
+    margin-bottom: 30px;
   }
   .card.first {
     margin-left: 30px;
@@ -1071,27 +1069,19 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 70vw;
+    width: 80vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     max-width: 730px;
     padding: 20px;
     padding-bottom: 45px;
-    margin-right: 30px;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     color: black;
     text-align: left;
     display: inline-block;
-    -webkit-animation: fade 2s ease;
-            animation: fade 2s ease;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-  }
-  .card.first {
-    margin-left: 30px;
+    margin-bottom: 20px;
   }
   .card .profile {
     display: -webkit-box;
@@ -1147,11 +1137,14 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100vw;
-    overflow-x: scroll;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     margin-top: 40px;
