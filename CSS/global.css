@@ -488,9 +488,6 @@ h3 {
     text-align: left;
     margin-bottom: 30px;
   }
-  .card.first {
-    margin-left: 30px;
-  }
   .card .profile {
     display: -webkit-box;
     display: -ms-flexbox;
